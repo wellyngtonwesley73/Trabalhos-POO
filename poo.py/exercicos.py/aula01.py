@@ -1,13 +1,9 @@
 import math
 
-
-
-
-
 class Ponto:
-    # definicao das métodos
+    # definição dos métodos
     def __init__(self, x, y):
-        # definicao dos atributos
+        # definição dos atributos
         self.x = x
         self.y = y
 
@@ -16,7 +12,7 @@ class Ponto:
         y = self.y
         print(f'{x=}, {y=}')
 
-    def distancia(self, outro: Ponto):
+    def distancia(self, outro: 'Ponto'):
         dx = self.x - outro.x
         dy = self.y - outro.y
         d = math.sqrt(dx**2 + dy**2)
@@ -25,19 +21,25 @@ class Ponto:
     def move(self, dx, dy):
         self.x = self.x + dx
         self.y = self.y + dy
-
-    def distancia_origem(self,): 
-
+        
+    def distancia_origem(self): 
+        dx = self.x - 0
+        dy = self.y - 0
+        d = math.sqrt(dx**2 + dy**2)
+        return d
+    
+    def iguais(self, outro: 'Ponto'):
+        return self.x == outro.x and self.y == outro.y
 
 print('Criando pontos')
-p = Ponto(2, 3)
-a = Ponto(5, 4)
+p1 = Ponto(2, 3)
+p2 = Ponto(2, 3)
+p3 = Ponto(5, 4)
 
-p.exibir() # exibir(p)
-a.exibir()
+p1.exibir()
+p3.exibir()
 
-print(p.distancia(a))
-
-p.move(10, 20)
-p.exibir()
-
+print(p1.distancia(p3))
+print(p1.iguais(p2))
+print(p1.iguais(p3))
+print(p1.distancia_origem())
