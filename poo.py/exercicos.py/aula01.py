@@ -23,8 +23,8 @@ class Ponto:
         self.y = self.y + dy
         
     def distancia_origem(self): 
-        dx = self.x - 0
-        dy = self.y - 0
+        dx = self.x  - 0
+        dy = self.y  - 0
         d = math.sqrt(dx**2 + dy**2)
         return d
     
@@ -43,3 +43,7 @@ print(p1.distancia(p3))
 print(p1.iguais(p2))
 print(p1.iguais(p3))
 print(p1.distancia_origem())
+
+
+
+
