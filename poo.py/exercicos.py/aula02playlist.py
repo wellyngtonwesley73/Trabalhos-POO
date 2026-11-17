@@ -10,4 +10,4 @@ class Playlist:
 playlist = Playlist()
 
 print()
-
+#estatus pausado e tals metodos e atributos
